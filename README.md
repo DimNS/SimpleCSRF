@@ -21,10 +21,13 @@ require 'vendor/autoload.php';
 session_start();
 
 // Init class
-$csrf = new \DimNS\SimpleCSRF('a unique string for the user'); // Example: USER_ID . ':' . USER_LOGIN
+$csrf = new \DimNS\SimpleCSRF(); // Default session name: csrf_token
 
-// Generate a token for forms
-$csrf_token = $csrf->generateToken();
+// Init class with other session name
+$csrf = new \DimNS\SimpleCSRF('my_session_name');
+
+// Getting a token for forms
+$csrf_token = $csrf->getToken();
 
 // Checking the token
 if ($csrf->validateToken($_POST['_token'])) {
@@ -53,10 +56,13 @@ require 'vendor/autoload.php';
 session_start();
 
 // Init class
-$csrf = new \DimNS\SimpleCSRF('a unique string for the user'); // Example: USER_ID . ':' . USER_LOGIN
+$csrf = new \DimNS\SimpleCSRF(); // Default session name: csrf_token
+
+// Init class with other session name
+$csrf = new \DimNS\SimpleCSRF('my_session_name');
 
 // Generate a token for forms
-$csrf_token = $csrf->generateToken();
+$csrf_token = $csrf->getToken();
 
 // Checking the token
 if ($csrf->validateToken($_SERVER['HTTP_X_CSRFTOKEN'])) {

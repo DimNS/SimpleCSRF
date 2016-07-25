@@ -1,7 +1,7 @@
 {
     "name": "dimns/simplecsrf",
     "type": "library",
-    "description": "Simple CSRF-token class to prevent CSRF attacks",
+    "description": "Simple CSRF-token class to prevent CSRF attacks. For forms and AJAX requests.",
     "keywords": ["php", "csrf"],
     "homepage": "http://github.com/dimns/simplecsrf",
     "license" : "MIT",
