@@ -1,3 +1,5 @@
+## Project is deprecated.
+
 # Simple CSRF-token class to prevent CSRF attacks
 
 [![Latest Stable Version](https://poser.pugx.org/dimns/simplecsrf/v/stable)](https://packagist.org/packages/dimns/simplecsrf)
